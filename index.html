@@ -14,24 +14,24 @@
 </head>
 <body>
 
-  <header>
+  <header class="header">
     <div class="container">
       <nav class="nav">
-        <a href="#" class="nav-link active">Главная</a>
-        <a href="#" class="nav-link">Обо мне</a>
-        <a href="#" class="nav-link">Портфолио</a>
-        <a href="#" class="nav-link">Контакты</a>
+        <a class="nav-link active">Главная</a>
+        <a class="nav-link">Обо мне</a>
+        <a class="nav-link">Портфолио</a>
+        <a class="nav-link">Контакты</a>
       </nav>
     </div>
   </header>
   <!--HEADER-->
 
-  <section class="intro">
+  <section class="intro" id="intro">
     <div class="container">
       <div class="intro-info">
         <h1>Илья Исаков</h1>
         <p>Начинающий IT специалист, который любит свое дело и стремится обучиться чему-то новому. В поиске компании с перспективой профессионального роста и дружным коллективом.</p>
-        <a href="#" class="button">Связаться со мной</a>
+        <a class="button">Связаться со мной</a>
       </div>
       <div class="intro-photo">
         <img src="./img/me.jpg" alt="Илья Исаков">
@@ -42,7 +42,7 @@
 
   <main class="main">
     <div class="container">
-      <section class="about-me">
+      <section class="about-me" id="about-me">
         <div class="interests">
           <h2 class="section-header">Обо мне – навыки и интересы</h2>
           <h3>Образование
@@ -106,7 +106,7 @@
           <div class="skill">
             <span class="material-icons skill-icon">storage</span>
             <h3 class="skill-header">Базы данных</h3>
-            <p class="skill-description">Знаком с проектированием баз данных, написанием различных сценарий и запросов на SQL. Связывал базу данных с десктопным приложением .NET и добавлял возможность пользователю добавлять, редактировать и удалять записи из таблиц базы данных</p>
+            <p class="skill-description">Знаком с проектированием баз данных, написанием различных сценариев и запросов на SQL. Связывал базу данных с десктопным приложением .NET и добавлял возможность пользователю добавлять, редактировать и удалять записи из таблиц базы данных</p>
           </div>
           <div class="skill">
             <span class="material-icons skill-icon">person</span>
@@ -121,43 +121,96 @@
         </div>
       </section>
       <!-- /.about-me -->
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="portfolio-description">
           <h2 class="section-header">Портфолио</h2>
           <p class="portfolio-info">Работы, которые подтверждают мои навыки и опыт</p>
           <div class="red-line"></div>
         </div>
         <div class="swiper-container">
-
             <div class="swiper-wrapper">
               <a href="https://randy525.github.io/dart-service/" class="swiper-slide work work-1" target="_blank">
                 <h4 class="work-name">Dart Service</h4>
                 <div class="work-line"></div>
-                <p class="work-description">Пока мой лучший проект. В нем присутствуют слайдеры, плавное появление элементов и адаптивность.</p>
+                <p class="work-description">Кликните, чтобы ознакомиться подробнее</p>
                 <div class="shading"></div>
               </a>
-              <a href="https://randy525.github.io/portfolio-site/" class="swiper-slide work work-2" target="_blank">
-                <h4 class="work-name">Сайт-портофолио</h4>
+              <a href="https://randy525.github.io/akatsuki/" class="swiper-slide work work-2" target="_blank">
+                <h4 class="work-name">Akatsuki</h4>
                 <div class="work-line"></div>
-                <p class="work-description">Один из первых проектов. Сайт портофолио который делал по макету, не в серьез. Присутствует адаптивность и слайдер.</p>
+                <p class="work-description">Кликните, чтобы ознакомиться подробнее</p>
                 <div class="shading"></div>
               </a>
               <a href="https://randy525.github.io/spacex-1/" class="swiper-slide work work-3" target="_blank">
                 <h4 class="work-name">Space X</h4>
                 <div class="work-line"></div>
-                <p class="work-description">Страница ракеты от компании SpaceX. Присутствует паралакс эффект, видео в качестве фона и адаптивность.</p>
+                <p class="work-description">Кликните, чтобы ознакомиться подробнее</p>
+                <div class="shading"></div>
+              </a>
+
+              <a href="https://randy525.github.io/github-site/" class="swiper-slide work work-4" target="_blank">
+                <h4 class="work-name">GitHub</h4>
+                <div class="work-line"></div>
+                <p class="work-description">Кликните, чтобы ознакомиться подробнее</p>
                 <div class="shading"></div>
               </a>
             </div>
-
             <div class="swiper-pagination"></div>
         </div>
       </section>
       <!-- /.portfolio -->
+      <section class="contacts" id="contacts">
+        <div class="portfolio-description">
+          <h2 class="section-header">Контакты</h2>
+          <p class="portfolio-info">Вы можете связаться со мной используя информацию ниже</p>
+          <div class="red-line"></div>
+        </div>
+        <div class="contacts-info">
+          <div class="links">
+            <span class="link">
+              <span class="material-icons">call</span>
+              <a href="tel:+37360867495">+373-60-867-495</a></span>
+            <span class="link">
+              <span class="material-icons">email</span>
+              <a href="mailto:iliaisakovwork@yandex.ru">iliaisakovwork@yandex.ru</a>
+            </span>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/randy525" class="social-link" target="_blank">
+              <img src="./img/github-icon.png" alt="github" class="social-icon">
+            </a>
+            <a href="https://vk.com/iliaisakov525" class="social-link" target="_blank">
+              <img src="./img/vk-icon.png" alt="vk" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/iliaisakov525/" class="social-link" target="_blank">
+              <img src="./img/instagram-icon.png" alt="instagram" class="social-icon">
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- /.contacts -->
     </div>
   </main>
   <!-- /.main -->
-
+  <footer class="footer">
+    <div class="container">
+      <div class="copyright">
+        © Copyright Ilia Isakov 2021, All rights reserved.
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/randy525" class="social-link" target="_blank">
+          <img src="./img/github-icon.png" alt="github" class="social-icon">
+        </a>
+        <a href="https://vk.com/iliaisakov525" class="social-link" target="_blank">
+          <img src="./img/vk-icon.png" alt="vk" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/iliaisakov525/" class="social-link" target="_blank">
+          <img src="./img/instagram-icon.png" alt="instagram" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- /.footer -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
