@@ -98,11 +98,9 @@ if(document.documentElement.clientWidth >= 1000) {
   particlesJS.load('particles-js', 'particles.json', function() {
     console.log('callback - particles.js config loaded');
   });
-  document.querySelector('head').innerHTML += '<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">';
-  AOS.init();
 }
 
-
+AOS.init();
 
 
 
