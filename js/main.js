@@ -24,6 +24,8 @@ const nav = document.querySelector('.nav'),
 	containers = document.querySelectorAll('section'),
   contact = document.querySelector('a.button');
 
+const offset = document.documentElement.clientHeight > 780 ? 200 : 200;
+
 function switchLinks(link) {
   let current = 0;
   links.forEach(function(item, index) {
@@ -50,14 +52,14 @@ window.addEventListener('scroll', function() {
   const body = document.querySelector('body');
   if(pageYOffset > nav.offsetTop) {
     header.classList.add('header-fixed');
-    body.style.paddingTop = (height+10) + 'px';
+    body.style.marginTop = (height+50) + 'px';
   } else {
     header.classList.remove('header-fixed');
-    body.style.paddingTop = 0;
+    body.style.marginTop = 0;
   }
 
   containers.forEach(function(item, index) {
-    if(item.offsetTop-100 <= pageYOffset) {
+    if(item.offsetTop-offset <= pageYOffset) {
       switchLinks(links[index]);
     }
     let scrollHeight = Math.max(
@@ -66,13 +68,13 @@ window.addEventListener('scroll', function() {
       document.body.clientHeight, document.documentElement.clientHeight
     );
 
-    if(pageYOffset >= scrollHeight - document.documentElement.clientHeight) {
+    if(pageYOffset >= scrollHeight - document.documentElement.clientHeight - offset) {
       switchLinks(links[links.length-1]);
     }
   });
 });
 
-nav.addEventListener('click', function(e) {
+function navClickHandler(e) {
   if (e.target.tagName !== 'A') {
     return;
   }
@@ -82,12 +84,24 @@ nav.addEventListener('click', function(e) {
 	let current = switchLinks(e.target);
 
 	selectContainer(current);
-});
+}
+
+nav.addEventListener('click', navClickHandler);
 
 contact.addEventListener('click', function() {
   const lastInd = links.length-1;
   switchLinks(links[lastInd]);
   selectContainer(lastInd);
 });
+
+if(document.documentElement.clientWidth >= 1000) {
+  particlesJS.load('particles-js', './particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+  document.querySelector('head').innerHTML += '<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">';
+  AOS.init();
+}
+
+
 
 
